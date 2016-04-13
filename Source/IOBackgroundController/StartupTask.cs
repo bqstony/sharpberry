@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Net.Http;
+﻿using System.Threading.Tasks;
 using Windows.ApplicationModel.Background;
 using Windows.Devices.Gpio;
-using Windows.System.Threading;
-using System.Threading.Tasks;
 
 // The Background Application template is documented at http://go.microsoft.com/fwlink/?LinkID=533884&clcid=0x409
 
@@ -60,7 +54,7 @@ namespace IOBackgroundController
 
                 //Pause
                 await Task.Delay(500);
-            } while (counter < 10);
+            } while (counter < 100);  //ToDo Hw Switch
         }
 
         #endregion
